@@ -13,6 +13,7 @@ const validate = (schema) => (req, res, next) => {
 };
 
 router.post('/register', validate(registerSchema), register);
+router.post('/login', validate(loginSchema), login);
 router.get('/profile', authMiddleware, profile);
 
 export default router;
